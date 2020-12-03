@@ -1,0 +1,201 @@
+.articleNav{
+    margin-top: 8px;
+    li{
+        display: flex;
+        line-height: 24px;
+        &:not(:last-child){
+            &::after{
+                content:"/";
+                margin:0 5px;
+            }
+            a{
+                color:#000;                
+            }
+        }
+       a{
+           color:#AA0601
+       } 
+    }
+}
+
+.postMain{
+    width: 70%;
+    margin-right: 30px;
+    .p-date{
+        justify-content: space-between;
+        align-items: center;
+    }
+    .p-content{
+        img{
+            width: 100%;
+        }
+        p{
+            opacity: 0.6
+        }
+    }
+    .p-socilaMedia{
+        align-items: center;
+        padding-bottom: 16px;
+        a{
+            color:#000
+        }
+    }
+}
+
+.postControl{
+    justify-content: space-between;
+    margin-bottom: 304px;
+    .p-pre{
+        a{
+            display: flex;
+            align-items: center;
+            color:#000;
+            &::before{
+                content:'';
+                width: 24px;
+                height: 21px;
+                background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-undo.svg) no-repeat center;
+                background-size: contain;
+                display: inline-block;
+                margin-right: 8px;
+              }
+        }
+        
+    }
+    .p-next{
+        a{
+            display: flex;
+            align-items: center;
+            color:#000;
+            &::after{
+                content:'';
+                width: 24px;
+                height: 21px;
+                background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-redo.svg) no-repeat center;
+                background-size: contain;
+                display: inline-block;
+                margin-left: 8px;
+              }
+        }
+        
+    }
+}
+
+.postSidebar{
+    width: 25.5%;
+    h3{
+        display: flex;
+        align-items: center; 
+        &::before{
+            content:"";
+            width: 40px;
+            height: 48px;
+            background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/085a62fb22df4bf21c605a180648c6c6e35c2b32/week3/icon-tag.svg) no-repeat center;
+            background-size: contain;
+            display: inline-block;
+        }
+    }
+    .tagList{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            margin-bottom: 8px;
+        }
+        a{
+            font-size: 24px;
+            margin-right: 24px;
+            color:#AA0601;
+            font-weight: bold;
+            font-family: Roboto-Bold;
+            line-height: 32px;
+            
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .articlePage{
+        .container{
+            padding:0 39px;
+        }
+    }
+    .postControl{
+        margin-bottom: 104px;
+    }
+    .p-socilaMedia{
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .postSidebar{
+        width: 20%;
+        h3{
+            margin-bottom: 6px;
+            font-size: 20px;
+            line-height: 26px; 
+            &::before{              
+                width: 24px;
+                height: 24px;               
+            }
+        }
+        .tagList{
+            li{
+                margin-bottom: 0px;
+            }
+            a{
+                font-size: 16px;
+                margin-right: 16px;
+                line-height: 21px;
+                
+            }
+        }
+    } 
+}
+
+@media(max-width:540px){
+    .articlePage{
+        .container{
+            padding:0 15px;
+        }
+    }
+    .postContent{
+        flex-direction: column;
+        
+       
+    }
+    .postMain{
+        width: 100%;
+        margin-right: 0;
+    }
+    .postControl{
+        flex-direction: column;
+        margin-bottom: 39px;
+        .p-next{
+            a{
+                &::after{
+                    display:none
+                }
+                &::before{
+                    content:'';
+                    width: 24px;
+                    height: 21px;
+                    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/7059003f6d011be52053cb5e63d68f3999af01d7/week4/icon-redo.svg) no-repeat center;
+                    background-size: contain;
+                    display: inline-block;
+                    margin-right: 8px;
+                  }
+            }        
+        }
+    }
+    .postSidebar{
+        width: 75%;
+        margin-bottom: 56px;
+        h3{
+            margin-bottom: 10px; 
+        }
+    }    
+}

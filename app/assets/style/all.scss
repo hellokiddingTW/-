@@ -1,7 +1,19 @@
 
-@import "layout/banner";
+@import "layout/navBar";
+@import "layout/footer";
+@import "pages/index";
+@import "pages/productsOptical";
+@import "pages/location";
+@import "pages/blog";
+@import "pages/singleLocation";
+@import "pages/articlePage";
+@import "pages/qa";
 @import "helper/reset";
-
+@import "helper/utilities";
+@import "helper/variables";
+@import "component/productComponent";
+@import "component/locationComponent";
+@import "component/blogComponent";
 
 
 
@@ -11,15 +23,15 @@
 
 $color: #00cc99;
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
+// .header {
+//   height: 200px;
+//   background-color: #00cc99;
+// }
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
+// .footer {
+//   height: 200px;
+//   background-color: #00cc99;
+// }
 
 .box {
   width: 100px;

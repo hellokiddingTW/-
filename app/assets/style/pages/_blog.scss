@@ -1,0 +1,44 @@
+.blogNav{
+    background-color: #650300;
+    .container{
+        justify-content: space-between;
+    }
+    a{
+        color:#fff;
+        padding:12px 20px 14px 20px;
+        &:hover{
+            background: #AA0601
+        }
+    }
+    img{
+        width: 24px;
+    }
+}
+
+@media(max-width:1024px){
+    .blogNav{
+        .container{
+            padding:0 39px
+        }
+        a{
+            padding:16px;
+        }
+    } 
+    .blogContent{
+        .container{
+            padding:0 39px 
+        }
+    }
+    
+}
+
+@media(max-width:540px){
+    .blogNav{
+        display:none;
+    }
+    .blogContent{
+        .container{
+            padding:24px 15px 0px 15px 
+        }
+    }
+}

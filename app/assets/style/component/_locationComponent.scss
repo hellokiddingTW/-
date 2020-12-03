@@ -1,0 +1,122 @@
+.locationCard{
+    font-family: NotoSans-Regular;
+    width: 31%;
+    margin-bottom: 32px;
+    margin-right: 30px;
+    
+    &:nth-child(3n){
+        margin-right: 0px;
+    } 
+    
+    img{
+        width: 100%;
+    }
+    h3{
+        font-size: 24px;
+        padding: 12px 24px;
+        border: 1px solid #08080820;
+        line-height: 36px;
+    }
+    .contentTxt{
+        padding: 16px 24px;
+        border: 1px solid #00000020;
+        li{
+            display: flex;
+            font-size: 20px;
+            margin-bottom: 8px;  
+            line-height: 30px;     
+            &::before{
+                content:"";
+                display:block;
+                width: 21px;
+                height: 21px;
+                margin-right: 12px;
+                position: relative;
+            }
+        }
+    }
+    .telIcon{
+        &::before{
+            background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-phone.svg) no-repeat center;
+            background-size: contain
+        }
+    }
+    .clockIcon{
+        &::before{
+            background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-clock.svg) no-repeat center;
+            background-size: contain    
+        }
+    }
+    .locationIcon{
+        &::before{
+            background:url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-map.svg) no-repeat center;
+            background-size: contain;
+        }
+    }
+    .btn{
+        width: 100%;
+        background-color: #000;
+        color:#fff;
+        height: 66px;
+        padding:20px 0 ;
+        text-align: center;
+        font-size: 19px;
+        line-height: 26px;
+        cursor: pointer;
+        &:hover{
+            opacity:0.7
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .locationCard{
+        width: 47.8%;
+        margin-bottom: 20px;
+        &:nth-child(3n){
+            margin-right: 30px;
+        } 
+        &:nth-child(2n){
+            margin-right: 0px;
+        }  
+        h3{
+            font-size: 16px;
+            padding: 8px 16px;
+            line-height: 24px;
+        }      
+    }
+    
+    .contentTxt{
+        padding: 16px;
+        li{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .btn{
+        height: 52px;
+        padding:16px 0 ;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media(max-width:768px){
+    .locationCard{
+        margin-right: 30px;
+        &:nth-child(3n){
+            margin-right: 20px;
+        }       
+    }
+}
+
+@media(max-width:540px){
+    .locationCard{
+        width:100%;
+        margin-bottom: 16px;
+        margin-right: 0;
+        &:nth-child(3n){
+            margin-right: 0px;
+        }       
+    }
+}

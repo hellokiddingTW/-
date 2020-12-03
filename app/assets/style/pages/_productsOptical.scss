@@ -1,0 +1,132 @@
+.productsNav{    
+    li{
+        width: 33.33333%;
+        border:1px solid #DCDCDC;
+        position: relative;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 16px;
+            background-color:#AA0601;
+            display: block;
+            position: absolute;
+            transition: all 0.5s;
+            bottom: 0;
+            opacity:0;
+        }
+        &:hover{
+            &::after{
+                opacity:1;
+            }
+        }
+        a{           
+            padding:24px 0 ;
+            text-align: center;
+            color:#000;
+            // &:hover{
+            //     border-bottom:16px solid #AA0601
+            // }
+            &::before{
+                content:'';
+                margin-right:8px;
+                width: 48px;
+                height: 48px;
+                position: relative;
+                display: inline-block;
+                top: 6px;
+            }
+        };
+    }
+    .diamondIcon{
+        &::before{
+            background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-diamond-black.svg') no-repeat center;
+            background-size: contain;
+        }
+    }
+    .sunIcon{
+        &::before{
+          
+            background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-sun-black.svg') no-repeat center;
+            background-size: contain;
+        
+        }
+    }
+    .flashIcon{
+        &::before{
+          
+            background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/4baf15e7aa2800a1e312de01435b7dbf6f654843/week4/icon-thunder-black.svg') no-repeat center;
+            background-size: contain;
+        
+        }
+    }
+}
+
+.productBanner{
+    height: 309px;
+    .bannerPic1{
+        background:url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-1.png?raw=true") no-repeat center;
+        width: 50%;
+        background-size: cover
+    }
+    
+    .bannerPic2{
+        background:url("https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-2.png?raw=true") no-repeat center;
+        width: 50%;
+        background-size: cover
+    }  
+}
+
+.productContent{
+    text-align: center;
+    .productList{
+    flex-wrap: wrap;
+    justify-content: space-between;
+        }
+    }
+
+
+
+
+@media(max-width:1024px){
+.productsNav{
+    li{
+        a{
+            &::before{
+                width: 32px;
+                height: 32px;
+            }
+        }
+     }
+  }
+  .productContent{
+      padding:0 40px;
+  }
+}
+
+@media(max-width:768px){
+    .productContent{
+        padding:0 39px;
+    }
+}
+
+
+@media(max-width:576px){
+    .productsNav{
+        li{
+            a{  
+                padding:8px 0;
+                &::before{
+                    width: 14px;
+                    height: 14px;
+                    top: 3px
+                }
+            }
+         }
+    }
+    .productBanner{
+        height: 144px;
+    }
+    .productContent{
+        padding:0 15px;
+    }
+}
